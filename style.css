@@ -1,0 +1,121 @@
+.rock,
+.paper {
+    width: 130px;
+    
+}
+.scissors {
+    width: 100px;
+}
+
+.rock,
+.paper,
+.scissors {
+    position: relative;
+    top: 40px;
+    left: 10px;
+}
+
+.gamingImg {
+    width: 120px;
+    position: absolute;
+    top: 180px;
+    left: 200px;
+}
+
+.gamingImg3 {
+    width: 140px;
+    position: relative;
+    top: 200px;
+    left: 200px;
+}
+
+.gamingImg2 {
+    width: 200px;
+    position: absolute;
+    top: 150px;
+    left: 470px;
+    border: 1px solid red;
+    background-color: gray;
+    width: 130px;
+}
+
+.rockk,
+.scissorss,
+.paperr {
+    display: none;
+}
+
+
+.habar {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+}
+
+.rasmlar {
+    display: flex;
+    flex-direction: column;
+}
+
+#birinchi {
+    color: green;
+}
+
+#ikkinchi {
+    color: red;
+}
+
+@media (max-width: 650px) {
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    .aytilishi {
+        display: inline;
+        text-align: center;
+    }
+    .reset {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .compbox{
+        display: inline;
+        flex-direction: column;
+    }
+    .gamingImg2 {
+        position: absolute;
+        top: 170px;
+        width: 100px;
+        left: 72%;
+    }
+    .gamingImg3 {
+        position: absolute;
+        width: 80px;
+    }
+    .gamingImg {
+        left: 35%;
+        width: 90px;
+    }
+    .habar {
+        display: grid;
+        column-gap: 10px;
+        grid-template-columns: auto auto;
+    }
+    .rasmlar {
+        display: flex;
+        flex-direction: column;
+        width: 80px;
+    }
+    .demo {
+        color: blue;
+    }
+    .rock,
+    .paper {
+        width: 90px;
+    }
+    .scissors {
+        width: 75px;
+    }
+}
