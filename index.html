@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anvarjon's Portfolio</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  </head>
+  <body>
+    <!-- Header design -->
+    <header class="header">
+      <a href="#" class="logo">Portfolio</a>
+      <i class="bx bx-menu" id="menu-icon"></i>
+      <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">My Skills</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+    <section class="home" id="home">
+      <div class="home-content">
+        <h3>Hello, It's Me</h3>
+        <h1>Anvarjon Sheraliev</h1>
+        <h3>And I'm a <span>Frontend Developer</span></h3>
+        <p>
+          Welcome to my portfolio page! I'm thrilled to share my journey as a
+          Junior Frontend Developer. Here, you'll discover the fusion of
+          creativity and coding that drives my passion for web development. As a
+          newcomer to the world of front-end magic, I'm excited to showcase the
+          projects and skills that I've been cultivating. Let's connect and
+          explore the endless possibilities of the digital realm together!
+        </p>
+        <div class="social-media">
+          <a href="https://www.facebook.com/anvar.sheraliyev.35"
+            ><i class="bx bxl-facebook"></i
+          ></a>
+          <a href="https://github.com/anvarali1996"
+            ><i class="bx bxl-github"></i
+          ></a>
+          <a href="https://wa.me/+37126635157"
+            ><i class="bx bxl-whatsapp"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/anvarjon-sheraliev/"
+            ><i class="bx bxl-linkedin"></i
+          ></a>
+        </div>
+        <a href="Anvarjon's CV.pdf" class="btn">Download CV</a>
+      </div>
+      <div class="home-img">
+        <img
+          src="img/photo_2024-03-20_14-46-25-removebg-preview.png"
+          alt="rasm"
+        />
+      </div>
+    </section>
+    <section class="about" id="about">
+      <div class="about-img">
+        <img
+          class="rasm"
+          src="img/photo_2024-03-20_14-46-25-removebg-preview.png"
+          alt="dd"
+        />
+      </div>
+      <div class="about-content">
+        <h2 class="heading">About <span>Me</span></h2>
+        <h3>Frontend Developer!</h3>
+        <p>
+          I work at restaurant as a sushimaster. However, I'm going to change my
+          profession. Thus, I chose web development. I've a start-up bussiness
+          that I engrave stainless staffs and I write nfc tags.
+        </p>
+        <!-- uchirish <a href="#" class="btn">Read more</a> -->
+      </div>
+    </section>
+
+    <!-- services section -->
+
+    <!-- hozircha olib turamiz 
+    <section class="services" id="services">
+      <h2 class="heading">Our <span>Services</span></h2>
+
+      <div class="services-container">
+        <div class="services-box">
+          <i class="bx bx-paint" id="haligi2"></i>
+          <h3>Graphic Design</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+            aspernatur laboriosam nam, perferendis libero ullam ad tenetur!
+            Dolores enim iure odit dolor nostrum labore nobis nam iusto qui
+            aperiam? Veritatis.
+          </p>
+          <a href="#" class="btn">Read More</a>
+        </div>
+
+        <div class="services-box">
+          <i class="bx bx-code-alt" id="haligi1"></i>
+          <h3>Web Development</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+            aspernatur laboriosam nam, perferendis libero ullam ad tenetur!
+            Dolores enim iure odit dolor nostrum labore nobis nam iusto qui
+            aperiam? Veritatis.
+          </p>
+          <a href="#" class="btn">Read More</a>
+        </div>
+
+        <div class="services-box">
+          <i class="bx bx-bar-chart-alt" id="haligi"></i>
+          <h3>Marketing</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+            aspernatur laboriosam nam, perferendis libero ullam ad tenetur!
+            Dolores enim iure odit dolor nostrum labore nobis nam iusto qui
+            aperiam? Veritatis.
+          </p>
+          <a href="#" class="btn">Read More</a>
+        </div>
+      </div>
+    </section>
+  -->
+
+    <section class="services" id="services">
+      <h2 class="heading">My <span>Skills</span></h2>
+
+      <div class="services-container">
+        <div class="services-box">
+          <i class="bx bxl-html5"></i>
+          <h3>HTML</h3>
+          <!-- <p>I've advanced knowledge</p> -->
+        </div>
+
+        <div class="services-box">
+          <i class="bx bxl-css3"></i>
+          <h3>CSS</h3>
+          <!-- <p>I've enough knowledge to decorate websites</p> -->
+        </div>
+        <div class="services-box">
+          <i class="bx bxl-bootstrap"></i>
+          <h3>Bootstrap</h3>
+          <!-- <p>I'm learning it to make it perfect</p> -->
+        </div>
+        <div class="services-box">
+          <i class="bx bxl-javascript"></i>
+          <h3>JavaScript</h3>
+          <!-- <p>I'm still learning it to making it perfect</p> -->
+        </div>
+        <div class="services-box">
+          <i class="bx bxl-react"></i>
+          <h3>React</h3>
+        </div>
+        <div class="services-box">
+          <i class="bx bxl-typescript"></i>
+          <h3>TypeScript</h3>
+        </div>
+        <div class="services-box">
+          <i class="bx bxl-angular"></i>
+          <h3>Angular</h3>
+          <p>Basic</p>
+        </div>
+        <div class="services-box">
+          <i class="bx bxl-php"></i>
+          <h3>PHP</h3>
+          <p>Basic</p>
+          <!-- <p>I'm learning it. I know how to use it.</p> -->
+        </div>
+        <div class="services-box">
+          <i class="bx bxl-stripe"></i>
+          <h3>Stripe</h3>
+          <!-- <p>I know how to connect it with web pages</p> -->
+        </div>
+        <!-- <div class="services-box">
+          <i class="bx bxl-sass"></i>
+          <h3>SASS</h3>
+          <p>I've few ability to use it</p>
+        </div> -->
+        <div class="services-box">
+          <i class="bx bxl-wordpress"></i>
+          <h3>Wordpress</h3>
+          <!-- <p>I've some knowledge about it. I can run a domain with it</p> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- portfolio section design -->
+
+    <section class="portfolio" id="portfolio">
+      <h2 class="heading">Latest <span>Project</span></h2>
+      <div class="portfolio-container">
+        <div class="portfolio-box">
+          <img
+            src="img/Screenshot 2024-03-20 at 15.27.25.png"
+            alt="Project avatar"
+          />
+          <div class="portfolio-layer">
+            <h4>Web Design</h4>
+            <p>
+              I clone the project (game) from fronendmentor.io. I usually do
+              this kind of challenges. #HTML, #CSS, #JavaScript
+            </p>
+            <a href="https://paper-game.netlify.app"
+              ><i class="bx bx-link-external"></i
+            ></a>
+          </div>
+        </div>
+        <div class="portfolio-box">
+          <img
+            src="img/Screenshot 2024-03-20 at 15.29.04.png"
+            alt="project avatar"
+          />
+          <div class="portfolio-layer">
+            <h4>Web Design</h4>
+            <p>
+              I clone the project from fronendmentor.io. I usually do this kind
+              of challenges. #HTML, #CSS
+            </p>
+            <a href="https://roaring-lily-9a9217.netlify.app"
+              ><i class="bx bx-link-external"></i
+            ></a>
+          </div>
+        </div>
+        <!-- <div class="portfolio-box">
+          <img
+            src="img/Empire-Flippers-an-online-business-marketplace.webp"
+            alt=""
+          />
+          <div class="portfolio-layer">
+            <h4>Web Design</h4>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt
+              dolorum laborum a, qui mollitia impedit
+            </p>
+            <a href="#"><i class="bx bx-link-external"></i></a>
+          </div>
+        </div>
+        <div class="portfolio-box">
+          <img src="img/library-website-design-1.jpg" alt="" />
+          <div class="portfolio-layer">
+            <h4>Web Design</h4>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt
+              dolorum laborum a, qui mollitia impedit
+            </p>
+            <a href="#"><i class="bx bx-link-external"></i></a>
+          </div>
+        </div> -->
+        <p class="text">
+          Please check my <span class="text-2">Githup account</span> to see more
+          projects
+        </p>
+      </div>
+    </section>
+
+    <!-- contact section design -->
+    <section class="contact" id="contact">
+      <h2 class="heading">Contact <span>Me!</span></h2>
+      <form action="#">
+        <div class="input-box">
+          <input type="text" placeholder="Full Name" />
+          <input type="email" id="sendername" placeholder="Email" />
+        </div>
+        <div class="input-box">
+          <input type="number" id="subject" placeholder="Mobile Number" />
+          <input type="text" id="to" placeholder="Email Subject" />
+        </div>
+        <textarea
+          name=""
+          id="message"
+          cols="30"
+          rows="10"
+          placeholder="Your Message"
+        ></textarea>
+        <button onclick="sendMail();" class="btn">Send Message</button>
+      </form>
+    </section>
+
+    <script>
+      function sendMail() {
+        (function () {
+          emailjs.init("Z-jnMg4e_TF1NvcXW");
+        })();
+
+        var params = {
+          sendername: document.querySelector("#sendername").value,
+          to: document.querySelector("#to").value,
+          subject: document.querySelector("#subject").value,
+          replyto: document.querySelector("#replyto").value,
+          message: document.querySelector("#message").value,
+        };
+        var serviceID = "service_is0ea4i";
+        var templateID = "template_3wx1wek";
+
+        emailjs
+          .send(serviceID, templateID, params)
+          .then((res) => {
+            alert("Email Sent Successfully");
+          })
+          .catch();
+      }
+    </script>
+
+    <footer class="footer">
+      <div class="footer-text">
+        <p>Copyright &copy; 2023 by Anvarjon | All Rights Reserved</p>
+      </div>
+      <div class="footer-iconTop">
+        <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
+      </div>
+    </footer>
+
+    <!-- scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- cutom js -->
+    <script src="script.js"></script>
+  </body>
+</html>
