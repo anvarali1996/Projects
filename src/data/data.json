@@ -1,0 +1,99 @@
+[
+  {
+    "id": 1,
+    "name": "Book",
+    "price": 10.99,
+    "imgUrl": "/images/book.webp"
+  },
+  {
+    "id": 2,
+    "name": "Computer",
+    "price": 1199,
+    "imgUrl": "/images/laptop.png"
+  },
+  {
+    "id": 3,
+    "name": "Banana",
+    "price": 1.05,
+    "imgUrl": "/images/banana.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Car",
+    "price": 14000,
+    "imgUrl": "/images/bwm.jpg"
+  },
+   {
+    "id": 5,
+    "name": "Book1",
+    "price": 11.99,
+    "imgUrl": "/images/book.webp"
+  },
+  {
+    "id": 6,
+    "name": "Computer 2",
+    "price": 1299,
+    "imgUrl": "/images/laptop.png"
+  },
+  {
+    "id": 7,
+    "name": "Banana 2",
+    "price": 1.15,
+    "imgUrl": "/images/banana.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Carc2",
+    "price": 14100,
+    "imgUrl": "/images/bwm.jpg"
+  },
+   {
+    "id": 9,
+    "name": "Book 3",
+    "price": 12.99,
+    "imgUrl": "/images/book.webp"
+  },
+  {
+    "id": 10,
+    "name": "Computer 3",
+    "price": 1399,
+    "imgUrl": "/images/laptop.png"
+  },
+  {
+    "id": 11,
+    "name": "Banana 3",
+    "price": 1.25,
+    "imgUrl": "/images/banana.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Car 3",
+    "price": 14200,
+    "imgUrl": "/images/bwm.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Book 4",
+    "price": 13.99,
+    "imgUrl": "/images/book.webp"
+  },
+  {
+    "id": 14,
+    "name": "Computer 4",
+    "price": 1499,
+    "imgUrl": "/images/laptop.png"
+  },
+  {
+    "id": 15,
+    "name": "Banana 4",
+    "price": 1.35,
+    "imgUrl": "/images/banana.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Car 4",
+    "price": 14300,
+    "imgUrl": "/images/bwm.jpg"
+  }
+
+]
