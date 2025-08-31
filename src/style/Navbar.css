@@ -1,0 +1,177 @@
+body {
+    font-family: 'Manrope', sans-serif;
+}
+.navbar {
+
+    border-radius: 70px;
+    margin: 0px 18px 36px 18px;
+    top: 18px;
+    width: 1564px;
+    height: 72px;
+    background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 70px;
+    opacity: 1;
+}
+
+.navbar-brand {
+    margin-left: 32px;
+}
+
+/* #navbarNav {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+}
+
+.main-con {
+    background-color: #F6F7F8;
+    top: 0px;
+    left: 0px;
+    width: 1600px;
+    height: 1195px;
+    background: #F6F7F8 0% 0% no-repeat padding-box;
+    opacity: 1;
+} */
+
+/* ///// */
+
+
+.navbar-nav {
+    margin-left: 212px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 173px;
+}
+ .nav-link {
+    display: flex;
+    font: normal normal bold 14px/19px Manrope;
+    letter-spacing: 0px;
+    color: #072635;
+}
+
+.navbar-nav .nav-link img.icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 9px;
+}
+
+.doctor-info {
+    display: flex;
+    align-items: center;
+}
+
+.doctor-image {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.doctor-details {
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+}
+
+.doctor-name {
+font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-14)/var(--unnamed-line-spacing-19) var(--unnamed-font-family-manrope);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-072635);
+    text-align: left;
+    font: normal normal bold 14px/19px Manrope;
+    letter-spacing: 0px;
+    color: #072635;
+    opacity: 1;
+}
+.doctor-info p {
+    margin: 0;
+}
+.doctor-title {
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-14)/var(--unnamed-line-spacing-19) var(--unnamed-font-family-manrope);
+        letter-spacing: var(--unnamed-character-spacing-0);
+        color: var(--unnamed-color-707070);
+        text-align: left;
+        font: normal normal normal 14px/19px Manrope;
+        letter-spacing: 0px;
+        color: #707070;
+        opacity: 1;
+}
+
+.navbar-now {
+    list-style: none;
+}
+
+.nav-item {
+    /* margin-left: 24px; */
+    padding: 5px;
+}
+
+.iconSpacial {
+    width: 24px;
+        height: 17px;
+        margin-right: 9px;
+}
+
+.navSpecial {
+    padding: 5px;
+    background: #01F0D0 0% 0% no-repeat padding-box;
+    border-radius: 41px;
+}
+
+img.doctools
+img.doctools2 {
+    width: 19px;
+        height: 20px;
+}
+
+/* ================//////////////////================== */
+/* .doctor-info {
+    display: flex;
+    align-items: center;
+} */
+
+.doctor-image {
+    width: 48px;
+    /* Adjust size as needed */
+    height: 48px;
+    /* Adjust size as needed */
+    margin-right: 12px;
+}
+
+/* .doctor-details {
+    display: flex;
+    flex-direction: column;
+    margin-right: 12px;
+} */
+
+/* .doctor-name,
+.doctor-title {
+    margin: 0;
+    line-height: 1.2;
+} */
+
+.vertical-line {
+    width: 1px;
+    height: 44px;
+    background-color: #000;
+    /* Change color as needed */
+    margin-right: 12px;
+}
+
+.doctor-icons {
+    display: flex;
+    align-items: center;
+}
+
+.doctor-icons img {
+    margin-left: 4px;
+}
+
+.navv-doc {
+    margin-left: 0px;
+}
+
+
+/* ==============================////////////============================= */
+
