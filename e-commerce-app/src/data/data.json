@@ -1,0 +1,99 @@
+[
+  {
+    "id": 1,
+    "name": "Book",
+    "price": 10.99,
+    "imgUrl": "/images/book.webp"
+  },
+  {
+    "id": 2,
+    "name": "Computer",
+    "price": 1199,
+    "imgUrl": "/images/laptop.png"
+  },
+  {
+    "id": 3,
+    "name": "Banana",
+    "price": 1.05,
+    "imgUrl": "/images/banana.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Car",
+    "price": 14000,
+    "imgUrl": "/images/bwm.jpg"
+  },
+   {
+    "id": 5,
+    "name": "Uzbek Duppi",
+    "price": 15.99,
+    "imgUrl": "/images/rasm1.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Nokia 1202",
+    "price": 19.99,
+    "imgUrl": "/images/rasm2.webp"
+  },
+  {
+    "id": 7,
+    "name": "Nokia 6300",
+    "price": 31.15,
+    "imgUrl": "/images/rasm3.png"
+  },
+  {
+    "id": 8,
+    "name": "Crocs",
+    "price": 18.99,
+    "imgUrl": "/images/crocs.jpg"
+  },
+   {
+    "id": 9,
+    "name": "Drone",
+    "price": 123.99,
+    "imgUrl": "/images/drone.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Dune HD",
+    "price": 109,
+    "imgUrl": "/images/Dune_HD.png"
+  },
+  {
+    "id": 11,
+    "name": "Eletronocal Scale",
+    "price": 1.25,
+    "imgUrl": "/images/eltrscale.webp"
+  },
+  {
+    "id": 12,
+    "name": "Fujifilm",
+    "price": 1400,
+    "imgUrl": "/images/fujifilm.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Headphones",
+    "price": 131.99,
+    "imgUrl": "/images/headphones.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Scale",
+    "price": 10.99,
+    "imgUrl": "/images/scale.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Tape",
+    "price": 7.35,
+    "imgUrl": "/images/tape.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Trainers",
+    "price": 40,
+    "imgUrl": "/images/Trainers.webp"
+  }
+
+]
