@@ -11,6 +11,8 @@ export function Home() {
         <header className="text-center">
           <h1>Welcome to My Store</h1>
           <p className="lead">Your one-stop shop for all your needs</p>
+          <p className="lead">Your one-stop shop for all your needs</p>
+
         </header>
 
         
