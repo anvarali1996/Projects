@@ -50,26 +50,27 @@ export function Store() {
 
   // Wait for all images on current page to load before hiding spinner
   useEffect(() => {
-    if (records.length === 0) {
-      setLoading(false);
-      return;
-    }
+  if (records.length === 0) {
+    setLoading(false);
+    return;
+  }
 
-    let loadedCount = 0;
-    const images = records.map((item) => {
-      const img = new Image();
-      img.src = item.imgUrl;
-      img.onload = () => {
-        loadedCount += 1;
-        if (loadedCount === records.length) setLoading(false);
-      };
-      img.onerror = () => {
-        loadedCount += 1;
-        if (loadedCount === records.length) setLoading(false);
-      };
-      return img;
-    });
-  }, [records]);
+  let loadedCount = 0;
+
+  records.forEach((item) => {
+    const img = new Image();
+    img.src = item.imgUrl;
+    img.onload = () => {
+      loadedCount += 1;
+      if (loadedCount === records.length) setLoading(false);
+    };
+    img.onerror = () => {
+      loadedCount += 1;
+      if (loadedCount === records.length) setLoading(false);
+    };
+  });
+}, [records]);
+
 
   return (
     <>
