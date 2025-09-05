@@ -60,6 +60,7 @@ import ReactPaginate, { ReactPaginateProps } from "react-paginate";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import { motion } from "framer-motion";
 
+
 interface PaginationButtonProps {
   setCurrentPage: (page: number) => void;
   currentPage: number;

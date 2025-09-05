@@ -3,6 +3,7 @@
 // } 
 // import React from 'react';
 import { Container } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 export function Home() {
   return (
@@ -11,9 +12,7 @@ export function Home() {
         <header className="text-center">
           <h1>Welcome to My Store</h1>
           <p className="lead">Your one-stop shop for all your needs</p>
-          <p className="lead">Your one-stop shop for all your needs</p>
-          <p className="lead">Your one-stop shop for all your needs</p>
-
+         <Link className='text-decoration-none' to='/store'><h4> Start shopping</h4></Link> 
         </header>
 
         
