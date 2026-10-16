@@ -1,12 +1,18 @@
-import { Offcanvas, Stack } from "react-bootstrap";
+import { Button, Offcanvas, Stack } from "react-bootstrap";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 import { CartItem } from "./CartItem";
 import { formatCurrency } from "../utilities/formatCurrency";
 import storeItems from "../data/data.json"
+import { useNavigate } from "react-router-dom";
 type ShoppingCartProps = {
     isOpen: boolean
 }
-export function ShoppingCart({isOpen}: ShoppingCartProps) {
+export function ShoppingCart({ isOpen }: ShoppingCartProps) {
+    const navigate = useNavigate();
+    const handleBuyNow = () => {
+        closeCart();
+        navigate('/buynow');
+    }
     const {closeCart, cartItems} = useShoppingCart()
     return (
           <Offcanvas show={isOpen} onHide={closeCart} placement="end">
@@ -25,6 +31,7 @@ export function ShoppingCart({isOpen}: ShoppingCartProps) {
                         }, 0))}</div>
                 </Stack>
             </Offcanvas.Body>
+            {cartItems.length > 0 && (<Button onClick={handleBuyNow} className="m-3">buy now</Button>)}
     </Offcanvas>
     )
 }
