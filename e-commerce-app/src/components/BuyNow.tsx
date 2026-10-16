@@ -155,7 +155,7 @@ import { Elements, CardElement, useStripe, useElements } from "@stripe/react-str
 // Initialize Stripe
 const stripePromise = loadStripe("pk_live_51NQ7JLCVoPtBUwqZNTbcI3C1DyuixZ1941ayo46ujxb6Pg8QJ6D5CVuobABOQaXj7yNNnWlIvipm6uJhzwl4tk3z00PCpunH66");
 
-const countries = ["United States", "Canada", "United Kingdom","Latvia","Uzbekistan"]; // Extend this list
+const countries = ["United States", "Canada", "United Kingdom","Latvia","Uzbekistan", "Poland"]; // Extend this list
 
 function CheckoutForm({ totalAmount }: { totalAmount: number }) {
   const stripe = useStripe();
