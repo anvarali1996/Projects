@@ -16,15 +16,36 @@ const CustomImage: FC<Props> = ({ product, fill }) => {
   const [isLoading, setIsLoading] = useState(true)
 
   return (
+    // <div
+    //   className="w-100 overflow-hidden"
+    //   style={{ height: fill ? "100%" : "200px" }}
+    // >
+    
+    //   <img
+    //     src={product.image}
+    //     alt={product.title}
+    //     onLoad={() => setIsLoading(false)}
+    //     className={`custom-img ${isLoading ? "loading" : "loaded"}`}
+    //   />
+    // </div>
     <div
-      className="w-100 overflow-hidden"
+      className="w-100 overflow-hidden d-flex align-items-center justify-content-center"
       style={{ height: fill ? "100%" : "200px" }}
     >
       <img
         src={product.image}
         alt={product.title}
         onLoad={() => setIsLoading(false)}
-        className={`custom-img ${isLoading ? "loading" : "loaded"}`}
+        style={{
+          width: "100%",
+          height: "100%",
+          // contain - rasm kesilmaydi, to'liq ko'rinadi. 
+          // Agar shunga qaramay to'liq ko'rinishini xohlasangiz 'contain' qoldiring, 
+          // agar ekranlarni to'ldirsin desangiz 'cover' qilasiz.
+          objectFit: "contain", 
+          opacity: isLoading ? 0 : 1,
+          transition: "opacity 0.3s ease-in-out",
+        }}
       />
     </div>
   )

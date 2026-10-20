@@ -36,7 +36,7 @@ import Loading from "../components/Loading";
 export function Store() {
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(false);
-  const recordsPerPage = 4;
+  const recordsPerPage = 6;
   const firstIndex = (currentPage - 1) * recordsPerPage;
   const lastIndex = currentPage * recordsPerPage;
 
