@@ -1,32 +1,79 @@
-// import express from 'express';
-// import dotenv from 'dotenv';
-// const path = require('path')
-const express = require('express');
-const colors = require('colors');
-const dotenv = require('dotenv').config();
-const { errorHandler } = require('./middleware/errorMiddleware')
-const connectDB = require('./config/db');
-// dotenv.config(); // Load environment variables
-connectDB();
-const port = process.env.PORT || 5000;
+// // import express from 'express';
+// // import dotenv from 'dotenv';
+// // const path = require('path')
+// const express = require('express');
+// const colors = require('colors');
+// const dotenv = require('dotenv').config();
+// const { errorHandler } = require('./middleware/errorMiddleware')
+// const connectDB = require('./config/db');
+// // dotenv.config(); // Load environment variables
+// connectDB();
+// const port = process.env.PORT || 5000;
+// const app = express();
+
+// app.use(express.json())
+// app.use(express.urlencoded({ extended: false }))
+
+// // app.get('/api/goals', (req, res) => {
+// //     res.send("Get worked")
+// // })
+
+// app.use('/api/goals', require('./routes/getRoutes'));
+// app.use('/api/users', require('./routes/userRoutes'));
+
+// // if (process.env.NODE_ENV === 'production') {
+// //     app.use(express.static(path.join(__dirname, '../frontend/build')))
+// //     app.get('*', (req, res) => res.sendFile(
+// //         path.resolve(__dirname, '../', 'frontend', 'build', 'index.html')))
+// // } else {
+// //     app.get('/', (req, res) => res.send('Please set to production!!!'))
+// // }
+// app.use(errorHandler);
+// app.listen(port, () => console.log(`Server started on port ${port}`));
+
+require("dotenv").config();
+
+const express = require("express");
+const connectDB = require("./config/db");
+const { errorHandler } = require("./middleware/errorMiddleware");
+
 const app = express();
+const port = process.env.PORT || 8000;
 
-app.use(express.json())
-app.use(express.urlencoded({ extended: false }))
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
-// app.get('/api/goals', (req, res) => {
-//     res.send("Get worked")
-// })
+// Test endpoint
+app.get("/health", (req, res) => {
+    res.status(200).json({ status: "ok" });
+});
 
-app.use('/api/goals', require('./routes/getRoutes'));
-app.use('/api/users', require('./routes/userRoutes'));
+// Connect to MongoDB before API requests
+app.use("/api", async (req, res, next) => {
+    try {
+        await connectDB();
+        next();
+    } catch (error) {
+        console.error("MongoDB connection error:", error.message);
+        res.status(503).json({
+            message: "Database connection failed",
+        });
+    }
+});
 
-// if (process.env.NODE_ENV === 'production') {
-//     app.use(express.static(path.join(__dirname, '../frontend/build')))
-//     app.get('*', (req, res) => res.sendFile(
-//         path.resolve(__dirname, '../', 'frontend', 'build', 'index.html')))
-// } else {
-//     app.get('/', (req, res) => res.send('Please set to production!!!'))
-// }
+// Routes
+app.use("/api/goals", require("./routes/getRoutes"));
+app.use("/api/users", require("./routes/userRoutes"));
+
+// Error middleware
 app.use(errorHandler);
-app.listen(port, () => console.log(`Server started on port ${port}`));
+
+// Local development
+if (!process.env.VERCEL) {
+    app.listen(port, () => {
+        console.log(`Server started on port ${port}`);
+    });
+}
+
+// Vercel
+module.exports = app;
