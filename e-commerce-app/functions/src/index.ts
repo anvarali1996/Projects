@@ -1,32 +1,49 @@
-/**
- * Import function triggers from their respective submodules:
- *
- * import {onCall} from "firebase-functions/v2/https";
- * import {onDocumentWritten} from "firebase-functions/v2/firestore";
- *
- * See a full list of supported triggers at https://firebase.google.com/docs/functions
- */
+import {onRequest} from "firebase-functions/v2/https";
+import Stripe from "stripe";
 
-import {setGlobalOptions} from "firebase-functions";
-import {onRequest} from "firebase-functions/https";
-import * as logger from "firebase-functions/logger";
+export const createPaymentIntent = onRequest(
+  {invoker: "public"}, // 👈 Barcha brauzer va domenlarga ruxsat berish uchun
+  (req, res) => {
+    res.set("Access-Control-Allow-Origin", "*");
+    res.set("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+    res.set("Access-Control-Allow-Headers", "Content-Type, Authorization");
 
-// Start writing functions
-// https://firebase.google.com/docs/functions/typescript
+    if (req.method === "OPTIONS") {
+      res.status(204).send("");
+      return;
+    }
 
-// For cost control, you can set the maximum number of containers that can be
-// running at the same time. This helps mitigate the impact of unexpected
-// traffic spikes by instead downgrading performance. This limit is a
-// per-function limit. You can override the limit for each function using the
-// `maxInstances` option in the function's options, e.g.
-// `onRequest({ maxInstances: 5 }, (req, res) => { ... })`.
-// NOTE: setGlobalOptions does not apply to functions using the v1 API. V1
-// functions should each use functions.runWith({ maxInstances: 10 }) instead.
-// In the v1 API, each function can only serve one request per container, so
-// this will be the maximum concurrent request count.
-setGlobalOptions({ maxInstances: 10 });
+    (async () => {
+      try {
+        const stripe = new Stripe(
+          process.env.STRIPE_SECRET_KEY || "",
+          {
+            apiVersion: "2025-07-30.basil",
+          }
+        );
 
-// export const helloWorld = onRequest((request, response) => {
-//   logger.info("Hello logs!", {structuredData: true});
-//   response.send("Hello from Firebase!");
-// });
+        const {amount} = req.body;
+
+        if (!amount) {
+          res.status(400).send({
+            error: "Amount (summa) ko'rsatilmadi!",
+          });
+          return;
+        }
+
+        const paymentIntent = await stripe.paymentIntents.create({
+          amount: Number(amount),
+          currency: "eur",
+        });
+
+        res.status(200).send({
+          clientSecret: paymentIntent.client_secret,
+        });
+      } catch (error: unknown) {
+        const errorMessage = error instanceof Error ?
+          error.message : "Noma'lum xatolik";
+        res.status(500).send({error: errorMessage});
+      }
+    })();
+  }
+);

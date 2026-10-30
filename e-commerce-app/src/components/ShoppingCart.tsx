@@ -20,10 +20,11 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
             <Offcanvas.Title>Cart</Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
-                <Stack gap={3}>
+                <Stack gap={4}>
                     {cartItems.map(item => (
                         <CartItem key={item.id} {...item} />
                     ))}
+                    <hr />
                     <div className="ms-auto fw-bold fs-5">Total: {" "}
                         {formatCurrency(cartItems.reduce((total, cartItem) => {
                             const item = storeItems.find(i => i.id === cartItem.id)
