@@ -1,75 +1,74 @@
-import { useEffect } from "react"
-import { useNavigate } from 'react-router-dom'
-import { useSelector, useDispatch } from 'react-redux'
-import GoalForm from "../components/GoalForm"
-import Spinner from "../components/Spinner"
-import { getGoals, reset } from "../features/goals/goalSlice"
-import GoalItem from "../components/GoalItem"
+
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+
+import GoalForm from "../components/GoalForm";
+import Spinner from "../components/Spinner";
+import GoalItem from "../components/GoalItem";
+import { getGoals, reset } from "../features/goals/goalSlice";
 
 function Dashboard() {
-  const navigate = useNavigate()
-  const dispatch = useDispatch()
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
-  const { user } = useSelector((state) => state.auth)
-  const { goals, isLoading, isError, message } = useSelector((state) => state.goals)
-  
-  // useEffect(() => {
-  //   if (!isError) {
-  //     console.log(message);
-  //   }
+  const { user } = useSelector((state) => state.auth);
 
-  //   if (!user) {
-  //     navigate('/login')
-  //   }
+  const { goals, isLoading, isError, message } = useSelector(
+    (state) => state.goals
+  );
 
-  //   dispatch(getGoals())
+  // Check authentication and fetch goals
+  useEffect(() => {
+    if (!user) {
+      navigate("/login");
+      return;
+    }
 
-  //   return () => {
-  //     dispatch(reset())
-  //   }
-  // }, [user, navigate, isError, message, dispatch])
+    dispatch(getGoals());
 
+    return () => {
+      dispatch(reset());
+    };
+  }, [user, navigate, dispatch]);
 
-useEffect(() => {
+  // Handle errors separately
+  useEffect(() => {
+    if (isError) {
+      console.error(message);
+    }
+  }, [isError, message]);
+
   if (!user) {
-    navigate('/login'); // Navigate once if the user is not logged in
-    return;
+    return null;
   }
-
-  if (isError) {
-    console.error(message); // Log errors if needed
-  }
-
-  dispatch(getGoals());
-
-  return () => {
-    dispatch(reset());
-  };
-}, [user, dispatch]); // Remove unnecessary dependencies like navigate, isError, and message
-
 
   if (isLoading) {
-    return <Spinner />
+    return <Spinner />;
   }
+
   return (
     <>
-      <section className="heading"><h1>Welcome {user && user.name}!!!</h1>
+      <section className="heading">
+        <h1>Welcome {user.name}!!!</h1>
         <p>Goals Dashboard</p>
       </section>
-      
+
       <GoalForm />
 
       <section className="content">
         {goals.length > 0 ? (
           <div className="goals">
             {goals.map((goal) => (
-        <GoalItem key={goal._id} goal={goal} />
+              <GoalItem key={goal._id} goal={goal} />
             ))}
           </div>
-        ) : (<h3>You have not set any goals</h3>)}
+        ) : (
+          <h3>You have not set any goals</h3>
+        )}
       </section>
     </>
-  )
+  );
 }
 
-export default Dashboard
+export default Dashboard;
