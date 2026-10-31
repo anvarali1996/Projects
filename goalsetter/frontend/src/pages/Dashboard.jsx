@@ -52,6 +52,7 @@ function Dashboard() {
       <section className="heading">
         <h1>Welcome {user.name}!!!</h1>
         <p>Goals Dashboard</p>
+        <p>Create your own goal</p>
       </section>
 
       <GoalForm />
